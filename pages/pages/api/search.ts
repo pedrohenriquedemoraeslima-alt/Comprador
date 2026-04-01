@@ -16,3 +16,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(500).json({ error: 'Erro' });
   }
 }
+const body = typeof req.body === 'string'
+  ? JSON.parse(req.body)
+  : req.body;
+
+const { material, local } = body;
