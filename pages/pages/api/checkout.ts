@@ -3,3 +3,6 @@ const body = typeof req.body === 'string'
   : req.body;
 
 const { plan } = body;
+export const config = {
+  runtime: 'nodejs'
+};
