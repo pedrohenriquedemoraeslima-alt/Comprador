@@ -22,3 +22,6 @@ const body = typeof req.body === 'string'
   : req.body;
 
 const { material, local } = body;
+export const config = {
+  runtime: 'nodejs'
+};
